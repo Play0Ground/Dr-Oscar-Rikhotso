@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Mercy M rikhotso</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Keep all existing styles */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #1a1a2e;
+    --text-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(45deg, #1a1a2e, #16213e);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: rgba(26, 26, 46, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    width: 100px; /* Ensure the width and height are equal */
+    height: 100px;
+    border-radius: 50%; /* Make it perfectly round */
+    object-fit: cover; /* Ensure the image scales properly without distortion */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease 0.5s both;
+}
+
+.section {
+    padding: 80px 0;
+    animation: fadeIn 1s ease;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.card-description {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.particle {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .card-title {
+        font-size: 1.3rem;
+    }
+}
+        /* Add this new style */
+.hidden {
+            display: none;
+    }
+
+/* General Styles */
+.about-dr-rikhotso {
+    padding: 120px;    
+    max-height: 160vh; /* Adjust based on your layout */
+    overflow-y: auto; /* Enables vertical scrolling */
+}
+
+.about-dr-rikhotso h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 10vh;
+}
+
+.about-dr-rikhotso p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.contact-box {
+    margin: center;
+    background-color: #42457d5a;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #a1afbf;
+    max-width: 50%;
+}
+
+.contact-box h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.contact-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-box li {
+    margin-bottom: 0.5rem;
+}
+
+.contact-box button {
+    display: flex;
+    align-items: center;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+.contact-box button i {
+    margin-right: 0.5rem;
+}
+
+.contact-box button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .contact-box {
+        max-width: 60%; /* Adjust for slightly smaller screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .about-dr-rikhotso {
+        padding: 80px; /* Reduce padding on medium screens */
+    }
+    
+    .contact-box {
+        max-width: 70%; /* Adjust for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-dr-rikhotso {
+        padding: 60px; /* Further reduce padding for smaller screens */
+    }
+
+    .contact-box {
+        max-width: 90%; /* Increase width on smaller screens */
+    }
+
+    .contact-box h3 {
+        font-size: 1.25rem; /* Adjust font size for smaller screens */
+    }
+
+    .contact-box button {
+        font-size: 0.9rem; /* Slightly smaller font size for buttons */
+    }
+}
+
+@media (max-width: 576px) {
+    .about-dr-rikhotso {
+        padding: 10px; /* Reduce padding on very small screens */
+        margin-top: 50px;
+    }
+    .about-dr-rikhotso h2 {
+    
+    margin-top: 10vh;
+}
+
+    .contact-box {
+        max-width: 100%; /* Full width for very small screens */
+    }
+
+    .contact-box h3 {
+        font-size: 1.1rem; /* Adjust font size further */
+    }
+
+    .contact-box button {
+        font-size: 0.8rem; /* Adjust button font size for very small screens */
+    }
+}
+
+@media (max-width: 380px) {
+    .about-dr-rikhotso {
+        padding: auto; /* Reduce padding on very small screens */
+        margin-top: 50px;
+    }
+    #dr-mercy-text {
+    margin-left: 5%;
+    
+}
+    .contact-box {
+        max-width: 100%; /* Full width for very small screens */
+    }
+
+    .contact-box h3 {
+        font-size: 1.1rem; /* Adjust font size further */
+    }
+
+    .contact-box button {
+        font-size: 0.8rem; /* Adjust button font size for very small screens */
+    }
+}
+
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: var(--text-color);
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+/* Hamburger animation */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Mobile menu styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 8%;
+        width: 90%;
+        background-color: rgba(26, 26, 46, 0.95);
+        padding: 20px;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    nav ul.active {
+        display: flex;
+        transform: translateY(0);
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+#dr-mercy-text {
+    font-size: 24px; /* Adjust font size */
+    font-weight: bold; /* You can make it bold if needed */
+    color: #f1f1f1; /* Change the text color */
+    animation: fadeIn 2s ease-in-out; /* Add animation */
+}
+
+/* Example of a fadeIn animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+body{
+display: flex;
+    justify-content: center; /* Horizontally centers the contact box */
+    align-items: center;     /* Vertically centers the contact box */
+    min-height: 100vh;       /* Ensures the container takes the full height of the viewport */
+    margin: 0;               /* Removes default body margin */
+}
+
+
+
+
+
+    .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  
+    .contact-box {
+        
+        padding: 15px;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    button {
+        background-color: #4CAF50;
+        border: none;
+        color: rgb(2, 2, 2);
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    
+
+/* Add this to your CSS */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.designer-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+#closePopup {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .popup-content {
+        width: 90%;
+        margin: 10% auto;
+    }
+}
+</style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <header>
+        <nav class="container">
+            <img src="https://em-content.zobj.net/source/apple/81/slightly-smiling-face_1f642.png" alt="LUOqj-Iyi-400x400" class="logo"> 
+            <h3 id="dr-mercy-text">Dr Oscar Rikhotso</h3>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('occupational')">Occupational Health</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="about-dr-rikhotso">
+            <div class="container">
+                <h2>ABOUT DR. Oscar Rikhotso</h2>
+                <p>Oscar Rikhotso is a distinguished lecturer in the Department of Environmental Health at the Tshwane University of Technology (TUT) in Pretoria, South Africa. With over a decade of experience in occupational health, Oscar has developed a deep expertise in occupational hygiene, particularly in the context of South Africa's industrial sectors. He holds a Doctor of Philosophy in Science from TUT and has been actively involved in advancing the understanding of occupational health risks, especially related to noise exposure in various industries.</p>
+                <p>As a Certified Occupational Hygienist with the Southern African Institute for Occupational Hygiene (SAIOH), Oscar has contributed significantly to the field through research, policy advocacy, and academic mentorship. His work often focuses on noise risk assessments, hearing conservation programs, and the broader implications of occupational hazards on worker health and safety. His research has been widely published in prestigious journals, addressing key issues such as noise control in manufacturing, occupational health regulations, and the social responsibility of companies in managing health risks.</p>
+                <p>Oscar is passionate about improving workplace health standards in South Africa and beyond, aiming to bridge the gap between regulatory frameworks and their practical applications in industry. His commitment to this cause is evident through his extensive publication record, which includes impactful articles in journals like Safety, Health SA Gesondheid, Annals of Work Exposures and Health, and Sustainability.</p>
+                <p>Outside of academia, Oscar collaborates with industry stakeholders to implement effective occupational health risk management strategies, ensuring safer work environments for employees across various sectors.</p>
+                
+                <div class="contact-box">
+                    <h3>Contact Details:</h3>
+                    <ul>
+                        <li><button onclick="window.location.href='#'"><i class="fa-solid fa-phone"></i> land line numvers</button></li>
+                        <li><button onclick="window.location.href='#'"><i class="fa-solid fa-phone"></i> your phoenenumbers</button></li>
+                        <li><button onclick="window.location.href='mailto:rikhotsoO@tut.ac.za'"><i class="fa-solid fa-envelope"></i> Email: rikhotsoMM@tut.ac.za</button></li>
+                        <li><button onclick="window.open('https://orcid.org/0000-0002-0380-1546, '_blank')"><i class="fa-solid fa-link"></i> ORCID</button></li>
+                    </ul>
+                </div>
+        
+                
+            </div>
+        </section>
+
+        <section id="occupational" class="section hidden">
+            <div class="container">
+                <h2 class="section-title">Occupational Health and Safety</h2>
+                <!-- Occupational Health content -->
+                <div class="card">
+                    <h3 class="card-title">Occupational Health Hazards: Employer, Employee, and Labour Union Concerns</h3>
+                    <p class="card-description">
+                        Authors: Rikhotso, O., Morodi, T.J. and Masekameni, D.M., 2021. International Journal of Environmental Research and Public Health, 18(10), p.5423.
+                    </p>
+                    <a href="https://doi.org/10.3390/ijerph18105423" class="btn" target="_blank">Read Full Paper</a>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">A case for a national regulatory directive on hearing protection device labelling for South African industry: a case study</h3>
+                    <p class="card-description">
+                        Authors: Rikhotso, O., Engelbrecht, J.C. and Harmse, J.L., 2021. Occupational Health Southern Africa, 27(4), pp.118-127.
+                    </p>
+                    <a href="https://hdl.handle.net/10520/ejc-ohsa_v27_n4_a3" class="btn" target="_blank">Read Full Paper</a>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Noise sources and control, and exposure groups in chemical manufacturing plants</h3>
+                    <p class="card-description">
+                        Authors: Rikhotso, O.; Harmse, J.L.; Engelbrecht, J.C., 2019. Applied Sciences, 9: 3523.
+                    </p>
+                    <a href="https://doi.org/10.3390/app9173523" class="btn" target="_blank">Read Full Paper</a>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Process Operators’ knowledge levels about noise: effectiveness of a noise training programme at a chemical manufacturing company</h3>
+                    <p class="card-description">
+                        Authors: Rikhotso, O., Harmse, J.L., and Engelbrecht, J.C., 2019. Occupational Health Southern Africa, 25(6): 3–10.
+                    </p>
+                    <a href="https://hdl.handle.net/10520/EJC-1acd490cc1" class="btn" target="_blank">Read Full Paper</a>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Occupational health and safety statistics as an indicator of worker physical health in South African industry</h3>
+                    <p class="card-description">
+                        Authors: Rikhotso, O., Morodi, T.J.; Masekameni, D.M., 2022. International Journal of Environmental Research and Public Health, 18, 5423.
+                    </p>
+                    <a href="https://doi.org/10.3390/ijerph19031690" class="btn" target="_blank">Read Full Paper</a>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Health risk management cost items imposed by occupational health and safety regulations: A South African perspective</h3>
+                    <p class="card-description">
+                        Authors: Rikhotso, O., Morodi, T.J.; Masekameni, D.M., 2022. Safety Science, 150, 105707.
+                    </p>
+                    <a href="#" class="btn" target="_blank">Read Full Paper</a>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Noise exposure abatement: a perspective from industry occupational health risk assessment reports</h3>
+                    <p class="card-description">
+                        Authors: Rikhotso, O., Morodi, T.J.; Masekameni, D.M., 2022. [Journal details missing].
+                    </p>
+                    <a href="#" class="btn" target="_blank">Read Full Paper</a>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Hearing conservation programme costs at selected South African companies</h3>
+                    <p class="card-description">
+                        Authors: Rikhotso, O., Morodi, T.J.; Masekameni, D.M., 2023.
+                    </p>
+                    <a href="https://doi.org/10.1093/annweh/wxaz097" class="btn" target="_blank">Read Full Paper</a>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">An evaluation of occupational health risk assessment methodologies from South African enterprises: noise risk assessment field study</h3>
+                    <p class="card-description">
+                        Authors: Rikhotso, O., TJ Morodi, T.J. & DM Masekameni, 2023. Occupational Health Southern Africa, 29(2), 65-74.
+                    </p>
+                    <a href="https://hdl.handle.net/10520/ejc-ohsa_v29_n2_a5" class="btn" target="_blank">Read Full Paper</a>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Noise risk assessment practices of four South African manufacturing and utilities companies</h3>
+                    <p class="card-description">
+                        Authors: Rikhotso, O., Morodi, T.J. & Masekameni, D.M., 2023. Health SA Gesondheid, 28, a2457.
+                    </p>
+                    <a href="https://doi.org/10.4102/hsag.v28i0.2457" class="btn" target="_blank">Read Full Paper</a>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Noise risk assessments within the adequately controlled and reasonably practicable philosophies</h3>
+                    <p class="card-description">
+                        Authors: Rikhotso, O., Morodi, T.J. & Masekameni, D.M., 2023. South African Journal of Communication Disorders, 70(1), 996.
+                    </p>
+                    <a href="https://doi.org/10.4102/sajcd.v70i1.996" class="btn" target="_blank">Read Full Paper</a>
+                </div>
+                 <!-- Add more Occupational Health cards here --> 
+
+            </section>
+        </div>
+        </div>
+        
+    </main>
+
+    <script>
+        // Particle animation code (keep existing code)
+
+        // Function to show/hide sections
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('main > section').forEach(section => {
+                section.classList.add('hidden');
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+
+        // Show home section by default
+        showSection('home');
+
+        // Particle animation
+        const particlesContainer = document.getElementById('particles');
+        const particleCount = 50;
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            
+            const size = Math.random() * 5 + 1;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            
+            particle.style.left = `${Math.random() * 100}%`;
+            particle.style.top = `${Math.random() * 100}%`;
+            
+            const duration = Math.random() * 20 + 10;
+            particle.style.animation = `float ${duration}s infinite`;
+            
+            particlesContainer.appendChild(particle);
+        }
+
+        // Hamburger menu functionality
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('nav ul');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+// Close menu when a link is clicked
+document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
+
+function showSection(id) {
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.add('hidden');
+    });
+    document.getElementById(id).classList.remove('hidden');
+}
+</script>
+
+</script>
+
+<style>/* Footer styling */
+    footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #2e3057c4;
+    color: white;
+    text-align: center;
+    padding: 5px; /* Decreased padding */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px; /* Adjust font size */
+}
+
+.footer-content p {
+    margin: 0;
+    margin-right: 5px; /* Decreased margin */
+    font-size: 12px; /* Adjust font size */
+}
+
+    /* Futuristic button styling */
+    #designer-info-btn {
+        background-color: #00f7ff;
+        color: #000;
+        border: none;
+        padding: 5px 10px;
+        font-size: 10px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 40px rgba(0, 255, 255, 0.4), 0 0 80px rgba(0, 255, 255, 0.1);
+    }
+
+    #designer-info-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.9), 0 0 60px rgba(0, 255, 255, 0.6), 0 0 100px rgba(0, 255, 255, 0.3);
+    }
+
+    /* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    text-align: left;
+    color: #000;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.contact-button {
+    display: block;
+    background-color: #007bff; /* Blue color for contact buttons */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.contact-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.social-button {
+    background-color: #28a745; /* Green color for social buttons */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 14px;
+    text-align: left;
+    text-decoration: none;
+}
+
+.social-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.close-button {
+    margin-top: 20px;
+    background-color: #ff4b5c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background-color: #ff6f61;
+}
+
+    .designer-contact, .socials {
+margin-top: 20px;
+}
+
+.label {
+font-size: 16px;
+font-weight: bold;
+}
+
+.info {
+margin-top: 5px;
+display: block;
+color: #1e90ff;
+text-decoration: none;
+font-size: 14px;
+}
+
+.info:hover {
+text-decoration: underline;
+}
+
+.socials a {
+margin-right: 15px;
+color: #1e90ff;
+text-decoration: none;
+}
+
+.socials a:hover {
+text-decoration: underline;
+}
+
+    @media (max-width: 480px) {
+        .modal-content {
+            padding: 15px;
+            width: 100%;
+        }
+
+        .close-btn {
+            font-size: 20px;
+            top: 5px;
+            right: 15px;
+        }
+    }</style>
+    
+<!-- Designer Modal -->
+<div id="designer-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn"></span>
+        <h2>Designer Information</h2>
+        <p>Brilliant Malepe is a versatile designer known for crafting impactful logos, captivating posters, dynamic animated videos, and user-friendly apps like this one. With a background in Environmental Health from the Tshwane University of Technology, he is recognized also for his technical expertise and creativity, bringing fresh and innovative ideas to live</p>
+        
+        
+        <!-- Contact Information -->
+        <div class="designer-contact">
+            <button class="contact-button" onclick="window.location.href='tel:+27726171976';">
+                <i class="fas fa-phone"></i> 0726171976
+            </button>
+        </div>
+        
+        <div class="designer-contact">
+            <button class="contact-button" onclick="window.location.href='mailto:malepebrilliant04@gmail.com';">
+                <i class="far fa-envelope"></i> malepebrilliant04@gmail.com
+            </button>
+        </div>
+        
+        <!-- Social Links -->
+        <div class="socials">
+            <button class="social-button" onclick="window.location.href='https://instagram.com/brilliant_malepe';">
+                <i class="fab fa-instagram"></i> Instagram
+            </button>
+            <button class="social-button" onclick="window.location.href='https://linkedin.com/in/brilliant-malepe';">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </button>
+        </div>
+        
+        <!-- WhatsApp Chat -->
+        <div class="designer-contact">
+            <button class="contact-button" onclick="window.location.href='https://wa.me/27726171976';">
+                <i class="fab fa-whatsapp"></i> Chat with the Designer
+            </button>
+        </div>
+        
+        <!-- Close Button -->
+        <button class="close-button">Close</button>
+    </div>
+
+    
+</div>
+
+
+
+<!-- Futuristic Button to Open Modal -->
+<footer>
+    <div class="footer-content">
+        <p>Coded by: Malepe Brilliant</p>
+        <button id="designer-info-btn">More About the Designer</button>
+    </div>
+</footer>
+
+
+<!-- JS for Particles and Modal Interaction -->
+
+
+<script>
+    // Modal Popup Handling
+    const modal = document.getElementById("designer-modal");
+    const btn = document.getElementById("designer-info-btn"); // Ensure this ID is assigned to your button
+    const closeBtn = document.querySelector(".close-btn");
+    const closeButton = document.querySelector(".close-button");
+
+    // Show the modal
+    btn.onclick = function () {
+        modal.style.display = "flex";
+    }
+
+    // Hide the modal when the close (X) icon is clicked
+    closeBtn.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // Hide the modal when the "Close" button is clicked
+    closeButton.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // Hide the modal when clicking outside the modal content
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+
+</body>
+</html>
