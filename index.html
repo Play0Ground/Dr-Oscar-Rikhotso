@@ -148,72 +148,91 @@ h2 {
     background-color: var(--secondary-color);
 }
 
-.particles {
-    position: fixed;
+body {
+    position: relative; /* Ensure the pseudo-element is positioned relative to the body */
+    margin: 0;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+    background-size: cover;
+    background-position: center;
+    -webkit-animation: slidein 50s infinite alternate;
+    animation: slidein 50s infinite alternate;
+}
+
+body::before {
+    content: "";
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity to reduce the image visibility */
+    z-index: -1; /* Ensure it sits behind the content */
+    pointer-events: none; /* Prevent interaction with the overlay */
+}
+
+@keyframes slidein {
+    from {background-position: top; background-size:3000px; }
+    to {background-position: -100px 0px;background-size:2750px;}
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(75, 75, 250, 0.3);
+    border-radius: 3px;
+}
+
+.center h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    text-transform: uppercase;
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 12s -2s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
     z-index: -1;
 }
 
-.particle {
-    position: absolute;
-    background: #fff;
-    border-radius: 50%;
-    opacity: 0.3;
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 20s linear reverse infinite;
+    opacity: 0.8;
 }
 
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 24s -1s reverse infinite;
+    opacity: 0.9;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+@keyframes wave {
+    0% { transform: translateX(1); }
+    25% { transform: translateX(-25%); }
+    50% { transform: translateX(-50%); }
+    75% { transform: translateX(-25%); }
+    100% { transform: translateX(1); }
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.2rem;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .card-title {
-        font-size: 1.3rem;
-    }
-}
         /* Add this new style */
 .hidden {
             display: none;
